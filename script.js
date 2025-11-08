@@ -1,9 +1,8 @@
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-in');
+const appear = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 });
+faders.forEach(el => appear.observe(el));
