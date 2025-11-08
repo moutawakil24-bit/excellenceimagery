@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Excellence Imagery – Capturing stories through timeless photography." />
-  <title>Excellence Imagery</title>
+  <meta name="description" content="Excellence Imagery – Fine Art Photography in Ottawa. Professional portraits, lifestyle, and event photography crafted with emotion and precision." />
+  <title>Excellence Imagery | Fine Art Photography</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- NAVBAR -->
   <header class="navbar">
-    <img src="assets/logo.png" alt="Excellence Imagery Logo" class="logo" />
+    <div class="logo-wrap">
+      <img src="assets/logo.png" class="logo" alt="Excellence Imagery Logo" />
+      <span class="brand">Excellence Imagery</span>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
@@ -18,41 +24,57 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="overlay">
-      <h1>Excellence Imagery</h1>
-      <p>Where moments become art.</p>
-      <a href="#gallery" class="btn">View My Work</a>
+      <h1>Where Every Frame Speaks Excellence</h1>
+      <p>Luxury photography for portraits, lifestyle, and timeless stories.</p>
+      <a href="#gallery" class="btn">Explore Gallery</a>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a visual storyteller passionate about capturing life’s beauty — from portraits to landscapes,
-      every frame reflects excellence. Based in Ottawa, I bring light, emotion, and artistry to every shot.
-    </p>
+  <!-- ABOUT -->
+  <section id="about" class="about fade-in">
+    <div class="text">
+      <h2>Crafting Moments Into Masterpieces</h2>
+      <p>
+        Welcome to <strong>Excellence Imagery</strong>, a creative studio built on passion and precision.
+        Every image is designed to evoke emotion and tell your story with artful depth.
+        Based in Ottawa, we offer premium photography services for individuals, couples, and brands who demand perfection.
+      </p>
+    </div>
   </section>
 
-  <section id="gallery" class="gallery">
-    <h2>Featured Work</h2>
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery fade-in">
+    <h2>Signature Collection</h2>
     <div class="grid">
-      <img src="assets/gallery/photo1.jpg" alt="Gallery Photo 1" />
-      <img src="assets/gallery/photo2.jpg" alt="Gallery Photo 2" />
-      <img src="assets/gallery/photo3.jpg" alt="Gallery Photo 3" />
+      <img src="assets/gallery/photo1.jpg" alt="Portrait Photography" />
+      <img src="assets/gallery/photo2.jpg" alt="Lifestyle Session" />
+      <img src="assets/gallery/photo3.jpg" alt="Event Photography" />
+      <img src="assets/gallery/photo4.jpg" alt="Studio Portrait" />
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p>Let’s collaborate or book your next session.</p>
-    <a href="mailto:contact@excellenceimagery.ca" class="btn">Contact Me</a>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials fade-in">
+    <h2>What Clients Say</h2>
+    <div class="testimonial">
+      <p>“Rachid turned our engagement shoot into pure art — we still can’t believe how stunning the photos look.”</p>
+      <span>- Sarah & Mark</span>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Excellence Imagery. All rights reserved.</p>
-  </footer>
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-in">
+    <h2>Let’s Create Something Beautiful</h2>
+    <p>Bookings & inquiries: <a href="mailto:contact@excellenceimagery.ca">contact@excellenceimagery.ca</a></p>
+    <a href="mailto:contact@excellenceimagery.ca" class="btn">Book a Session</a>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Excellence Imagery | Ottawa, Canada</p>
+  </footer>
 </body>
 </html>
