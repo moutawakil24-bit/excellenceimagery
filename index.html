@@ -2,194 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Excellence Imagery – Photography by Abdellah. Capturing life’s finest moments with artistry and soul." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Excellence Imagery – Photography by Abdellah." />
   <title>Excellence Imagery | Photography by Abdellah</title>
-
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" href="/assets/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
-<body>
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="nav-inner">
-    <div class="logo-wrap">
-      <!-- absolute path + fallback -->
-      <img src="/assets/logo.png" alt="Excellence Imagery Logo"
-           class="logo"
-           onerror="this.src='assets/logo.png'">
-      <div class="brand-wrap">
-        <span class="brand">Excellence Imagery</span>
-        <small class="tagline">By Abdellah — Capturing Every Moment with Excellence</small>
-      </div>
-    </div>
-    <nav class="nav-links" aria-label="Main Navigation">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#gallery" class="nav-link">Gallery</a>
-      <a href="#stats" class="nav-link">Stats</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <a class="btn small" href="mailto:booking@excellenceimagery.ca">Book Now</a>
-    </div>
-  </div>
-</header>
 
+<body>
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <img src="/assets/logo.png" alt="Excellence Imagery Logo" class="logo" />
+        <div class="brand-wrap">
+          <span class="brand">Excellence Imagery</span>
+          <small class="tagline">By Abdellah — Capturing Every Moment with Excellence</small>
+        </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#stats">Stats</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg" style="background-image: url('assets/hero.jpg')"></div>
+    <div class="hero-bg" style="background-image:url('/assets/hero.jpg')"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Timeless Photography, Crafted with <span>Passion</span></h1>
-      <p class="hero-sub">Professional photography services by <strong>Abdellah</strong> — portraits, weddings, events, and more.</p>
+      <p class="hero-sub">Professional photography services by <strong>Abdellah</strong>.</p>
       <div class="hero-cta">
         <a href="#gallery" class="btn">View Portfolio</a>
         <a href="#contact" class="btn ghost">Contact</a>
       </div>
-      <div class="mouse-scroll" aria-hidden="true"><span></span></div>
     </div>
   </section>
 
-  <main>
-    <!-- ABOUT -->
-    <section id="about" class="about reveal">
-      <h2>Photography That Tells Your Story</h2>
-      <p>
-        At <strong>Excellence Imagery</strong>, photographer <strong>Abdellah</strong> blends artistry and precision to craft images that speak from the heart.
-        Every frame is an authentic reflection of emotion, detail, and story — from weddings to portraits and creative editorials.
-      </p>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="about reveal">
+    <h2>Photography That Tells Your Story</h2>
+    <p>At <strong>Excellence Imagery</strong>, photographer <strong>Abdellah</strong> blends artistry and precision to craft images filled with emotion and beauty.</p>
+  </section>
 
-    <!-- STATS -->
-    <section id="stats" class="stats reveal">
-      <h2>By the Numbers</h2>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-value" data-target="250">0</div>
-          <div class="stat-label">Projects Completed</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" data-target="180">0</div>
-          <div class="stat-label">Happy Clients</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" data-target="7">0</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" data-target="12">0</div>
-          <div class="stat-label">Awards & Features</div>
-        </div>
-      </div>
-    </section>
+  <!-- STATS -->
+  <section id="stats" class="stats reveal">
+    <h2>By the Numbers</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-value" data-target="250">0</div><div class="stat-label">Projects</div></div>
+      <div class="stat-card"><div class="stat-value" data-target="180">0</div><div class="stat-label">Clients</div></div>
+      <div class="stat-card"><div class="stat-value" data-target="7">0</div><div class="stat-label">Years</div></div>
+      <div class="stat-card"><div class="stat-value" data-target="12">0</div><div class="stat-label">Awards</div></div>
+    </div>
+  </section>
 
-    <!-- GALLERY -->
-<!-- GALLERY -->
-<section id="gallery" class="gallery-section reveal">
-  <h2>Gallery</h2>
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-section reveal">
+    <h2>Gallery</h2>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item"><img src="/assets/gallery/photo1.jpg" alt="Photo 1" data-full="/assets/gallery/photo1.jpg"></div>
+      <div class="gallery-item"><img src="/assets/gallery/photo2.jpg" alt="Photo 2" data-full="/assets/gallery/photo2.jpg"></div>
+      <div class="gallery-item"><img src="/assets/gallery/photo3.jpg" alt="Photo 3" data-full="/assets/gallery/photo3.jpg"></div>
+      <div class="gallery-item"><img src="/assets/gallery/photo4.jpg" alt="Photo 4" data-full="/assets/gallery/photo4.jpg"></div>
+      <div class="gallery-item"><img src="/assets/gallery/photo5.jpg" alt="Photo 5" data-full="/assets/gallery/photo5.jpg"></div>
+      <div class="gallery-item"><img src="/assets/gallery/photo6.jpg" alt="Photo 6" data-full="/assets/gallery/photo6.jpg"></div>
+    </div>
+    <p class="gallery-note">Click any image to view it full size.</p>
+  </section>
 
-  <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-item">
-      <img loading="lazy" src="/assets/gallery/photo1.jpg" alt="Photo 1"
-           data-full="/assets/gallery/photo1.jpg"
-           onerror="this.src='assets/gallery/photo1.jpg'">
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <h2>Get in Touch</h2>
+    <p><strong>Photographer:</strong> Abdellah</p>
+    <p>Email: <a href="mailto:booking@excellenceimagery.ca">booking@excellenceimagery.ca</a></p>
+    <p>Phone: <a href="tel:3435588668">343-558-8668</a></p>
+    <div class="contact-actions">
+      <a href="mailto:booking@excellenceimagery.ca" class="btn">Book Now</a>
+      <a href="tel:3435588668" class="btn ghost">Call</a>
     </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="/assets/gallery/photo2.jpg" alt="Photo 2"
-           data-full="/assets/gallery/photo2.jpg"
-           onerror="this.src='assets/gallery/photo2.jpg'">
-    </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="/assets/gallery/photo3.jpg" alt="Photo 3"
-           data-full="/assets/gallery/photo3.jpg"
-           onerror="this.src='assets/gallery/photo3.jpg'">
-    </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="/assets/gallery/photo4.jpg" alt="Photo 4"
-           data-full="/assets/gallery/photo4.jpg"
-           onerror="this.src='assets/gallery/photo4.jpg'">
-    </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="/assets/gallery/photo5.jpg" alt="Photo 5"
-           data-full="/assets/gallery/photo5.jpg"
-           onerror="this.src='assets/gallery/photo5.jpg'">
-    </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="/assets/gallery/photo6.jpg" alt="Photo 6"
-           data-full="/assets/gallery/photo6.jpg"
-           onerror="this.src='assets/gallery/photo6.jpg'">
-    </div>
-  </div>
-
-  <p class="gallery-note">Click any image to view it full size.</p>
-</section>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonials reveal">
-      <h2>What Clients Say</h2>
-      <div class="carousel" id="testimonialCarousel">
-        <div class="carousel-track">
-          <blockquote class="slide">
-            <p>“Abdellah captured every moment beautifully — it felt effortless and fun.”</p>
-            <cite>- Sarah M.</cite>
-          </blockquote>
-          <blockquote class="slide">
-            <p>“Professional, creative, and patient. The results were stunning!”</p>
-            <cite>- Karim T.</cite>
-          </blockquote>
-          <blockquote class="slide">
-            <p>“Each photo told a story — truly exceptional work.”</p>
-            <cite>- Amira B.</cite>
-          </blockquote>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-btn prev" aria-label="Previous">‹</button>
-          <button class="carousel-btn next" aria-label="Next">›</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact reveal">
-      <h2>Get in Touch</h2>
-      <p>Let’s create something beautiful together.</p>
-      <p><strong>Photographer:</strong> Abdellah</p>
-      <p>Email: <a href="mailto:booking@excellenceimagery.ca">booking@excellenceimagery.ca</a></p>
-      <p>Phone: <a href="tel:3435588668">343-558-8668</a></p>
-      <div class="contact-actions">
-        <a href="mailto:booking@excellenceimagery.ca" class="btn">Book Now</a>
-        <a href="tel:3435588668" class="btn ghost">Call Abdellah</a>
-      </div>
-      <div class="socials">
-        <a href="#" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zM12 8.5A3.5 3.5 0 1 0 12 15a3.5 3.5 0 0 0 0-6.5zM18.5 6.5a.9.9 0 1 0 0 1.8.9.9 0 0 0 0-1.8z"/></svg></a>
-        <a href="#" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.3v-3h2.3V9.1c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .08 2 .08v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 3h-2v7A10 10 0 0 0 22 12z"/></svg></a>
-      </div>
-    </section>
-  </main>
+  </section>
 
   <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close">✕</button>
-    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <button class="lightbox-prev" aria-label="Prev">‹</button>
     <div class="lightbox-inner">
-      <img src="" alt="" id="lightboxImage" />
-      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <img src="" alt="" id="lightboxImage">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
     </div>
     <button class="lightbox-next" aria-label="Next">›</button>
   </div>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <p>© <span id="year"></span> Excellence Imagery — Photography by Abdellah</p>
-      <nav class="footer-nav">
-        <a href="#gallery">Portfolio</a> ·
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <p>© <span id="year"></span> Excellence Imagery — Photography by Abdellah</p>
   </footer>
 </body>
 </html>
