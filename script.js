@@ -1,7 +1,7 @@
 // year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// mobile menu toggle
+// mobile menu
 const menuToggle=document.getElementById('menuToggle');
 const navLinks=document.getElementById('navLinks');
 menuToggle.addEventListener('click',()=>{
@@ -9,7 +9,7 @@ menuToggle.addEventListener('click',()=>{
   menuToggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
 });
 
-// reveal on scroll
+// reveal animation
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
@@ -18,7 +18,7 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.2});
 reveals.forEach(r=>obs.observe(r));
 
-// click-to-enlarge modal
+// image modal
 const imgs=document.querySelectorAll('.gallery-grid img');
 const modal=document.getElementById('imgModal');
 const modalImg=document.getElementById('modalImg');
