@@ -34,29 +34,29 @@ h1,h2{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:1.2rem 6%;
-  max-width:1200px;
+  padding:1.6rem 6%;
+  max-width:1300px;
   margin:auto;
 }
 .logo-wrap{
   display:flex;
   align-items:center;
-  gap:0.8rem;
+  gap:1rem;
 }
 .logo{
-  height:72px;
+  height:100px; /* big, crisp logo */
   width:auto;
-  filter:drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,0.25));
 }
 .brand{
   font-weight:700;
-  font-size:1.4rem;
-  letter-spacing:0.5px;
+  font-size:1.6rem;
+  letter-spacing:0.6px;
   color:var(--accent);
 }
 .nav-links{
   display:flex;
-  gap:2rem;
+  gap:2.2rem;
 }
 .nav-links a{
   color:var(--text);
@@ -80,7 +80,7 @@ h1,h2{
   display:none;
   background:none;
   border:none;
-  font-size:1.8rem;
+  font-size:2rem;
   color:var(--text);
   cursor:pointer;
 }
@@ -232,6 +232,6 @@ section{
   }
   .nav-links.open{display:flex;}
   .nav-links a{padding:.8rem 0;}
-  .logo{height:60px;}
-  .brand{font-size:1.2rem;}
+  .logo{height:80px;}
+  .brand{font-size:1.3rem;}
 }
