@@ -10,9 +10,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 h1,h2{font-family:'Playfair Display',serif;color:var(--accent)}
 
 .navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #ddd;z-index:1000}
-.nav-inner{padding:1rem 6%;}
-.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:.7rem 6%}
-.logo{height:46px;width:auto}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 6%;}
+.logo{height:64px;width:auto;}
 .brand{font-weight:600;margin-left:.5rem;font-size:1.2rem}
 .nav-links{display:flex;gap:1rem}
 .nav-links a{color:var(--text);text-decoration:none;font-weight:500;transition:.2s}
