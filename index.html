@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Excellence Imagery – Ottawa-based fine art photography studio. Portraits, events, and lifestyle sessions crafted with elegance." />
   <title>Excellence Imagery | Fine Art Photography</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Fav / fonts -->
   <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <!-- Defer JS -->
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- NAV -->
   <header class="navbar">
-    <div class="logo-wrap">
-      <img src="assets/logo.png" alt="Excellence Imagery Logo" class="logo" />
-      <span class="brand">Excellence Imagery</span>
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <img src="assets/logo.png" alt="Excellence Imagery Logo" class="logo" />
+        <div class="brand-wrap">
+          <span class="brand">Excellence Imagery</span>
+          <small class="tagline">Ottawa • Fine Art Photography</small>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#stats" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn small" href="mailto:contact@excellenceimagery.ca">Book Now</a>
+      </div>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <div class="overlay">
-      <h1>Where Every Frame Speaks Excellence</h1>
-      <p>Luxury photography studio based in Ottawa. Portraits, weddings, and lifestyle redefined.</p>
-      <a href="#gallery" class="btn">View My Work</a>
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-bg" style="background-image: url('assets/hero.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Where Every Frame Speaks <span>Excellence</span></h1>
+      <p class="hero-sub">Luxury photography studio based in Ottawa. Portraits, weddings, and lifestyle redefined.</p>
+      <div class="hero-cta">
+        <a href="#gallery" class="btn">View Portfolio</a>
+        <a href="#contact" class="btn ghost">Let's Talk</a>
+      </div>
+      <div class="mouse-scroll" aria-hidden="true"><span></span></div>
     </div>
   </section>
 
   <main>
-    <section id="about" class="about fade-in">
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
       <h2>Crafting Moments Into Masterpieces</h2>
       <p>
         At <strong>Excellence Imagery</strong>, photography is more than pictures—it's storytelling through light and perspective.
@@ -39,33 +66,119 @@
       </p>
     </section>
 
-    <section id="gallery" class="gallery fade-in">
+    <!-- STATS -->
+    <section id="stats" class="stats reveal">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" data-target="600">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="12">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="1500">0</div>
+          <div class="stat-label">Images Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="300">0</div>
+          <div class="stat-label">Sessions</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery-section reveal">
       <h2>Signature Collection</h2>
-      <div class="grid">
-        <img src="assets/gallery/photo1.jpg" alt="Portrait Photography" />
-        <img src="assets/gallery/photo2.jpg" alt="Lifestyle Session" />
-        <img src="assets/gallery/photo3.jpg" alt="Event Photography" />
-        <img src="assets/gallery/photo4.jpg" alt="Studio Portrait" />
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Use .gallery-item with data-full for lightbox -->
+        <div class="gallery-item">
+          <img loading="lazy" src="assets/gallery/photo1.jpg" alt="Portrait Photography" data-full="assets/gallery/photo1.jpg" />
+        </div>
+        <div class="gallery-item">
+          <img loading="lazy" src="assets/gallery/photo2.jpg" alt="Lifestyle Session" data-full="assets/gallery/photo2.jpg" />
+        </div>
+        <div class="gallery-item">
+          <img loading="lazy" src="assets/gallery/photo3.jpg" alt="Event Photography" data-full="assets/gallery/photo3.jpg" />
+        </div>
+        <div class="gallery-item">
+          <img loading="lazy" src="assets/gallery/photo4.jpg" alt="Studio Portrait" data-full="assets/gallery/photo4.jpg" />
+        </div>
+        <!-- Add more items as needed -->
       </div>
+
+      <p class="gallery-note">Click any image to enlarge — use ← → or ESC to navigate/close.</p>
     </section>
 
-    <section class="testimonials fade-in">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials reveal">
       <h2>Client Words</h2>
-      <div class="testimonial">
-        <p>“Rachid captured our wedding like a dream — cinematic and emotional in every frame.”</p>
-        <span>- Amelia & Chris</span>
+      <div class="carousel" id="testimonialCarousel" aria-roledescription="carousel">
+        <div class="carousel-track">
+          <blockquote class="slide">
+            <p>“Rachid captured our wedding like a dream — cinematic and emotional in every frame.”</p>
+            <cite>- Amelia & Chris</cite>
+          </blockquote>
+
+          <blockquote class="slide">
+            <p>“A calming presence on the day, with a creative eye. The portraits exceeded expectations.”</p>
+            <cite>- Daniel</cite>
+          </blockquote>
+
+          <blockquote class="slide">
+            <p>“Fast turnaround, great communication, and artful editing — truly professional.”</p>
+            <cite>- Priya</cite>
+          </blockquote>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
+          <button class="carousel-btn next" aria-label="Next testimonial">›</button>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact fade-in">
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
       <h2>Book Your Session</h2>
       <p>Let's create something beautiful together. Reach me at <a href="mailto:contact@excellenceimagery.ca">contact@excellenceimagery.ca</a></p>
-      <a href="mailto:contact@excellenceimagery.ca" class="btn">Book Now</a>
+      <div class="contact-actions">
+        <a href="mailto:contact@excellenceimagery.ca" class="btn">Book Now</a>
+        <a href="tel:+16131234567" class="btn ghost">Call</a>
+      </div>
+
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zM12 8.5A3.5 3.5 0 1 0 12 15a3.5 3.5 0 0 0 0-6.5zM18.5 6.5a.9.9 0 1 0 0 1.8.9.9 0 0 0 0-1.8z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.3v-3h2.3V9.1c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .08 2 .08v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 3h-2v7A10 10 0 0 0 22 12z"/></svg>
+        </a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Excellence Imagery | Ottawa, Canada</p>
+  <!-- LIGHTBOX (hidden by default) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close (Esc)">✕</button>
+    <button class="lightbox-prev" aria-label="Previous (Left)">‹</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" id="lightboxImage" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    <button class="lightbox-next" aria-label="Next (Right)">›</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Excellence Imagery | Ottawa, Canada</p>
+      <nav class="footer-nav">
+        <a href="#gallery">Portfolio</a> ·
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
