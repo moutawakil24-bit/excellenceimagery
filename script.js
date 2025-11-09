@@ -174,4 +174,27 @@ lightbox.addEventListener('click', (e) => {
   });
 })();
 
+/* ====== MOBILE MENU TOGGLE ====== */
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    menuToggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+  });
+}
+
+/* ====== ACTIVE LINK HIGHLIGHT ====== */
+const sections = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", () => {
+  let scrollY = window.scrollY + 200;
+  sections.forEach(sec => {
+    const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+    if (!link) return;
+    if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight)
+      link.classList.add("active");
+    else link.classList.remove("active");
+  });
+});
+
 /* ====== Accessibility: focus outlines fo*
