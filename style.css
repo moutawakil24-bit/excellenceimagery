@@ -147,3 +147,36 @@ h2{font-family:'Playfair Display',serif;color:var(--gold);text-align:center;marg
   .hero-sub{font-size:0.95rem}
   .footer-inner{flex-direction:column;align-items:center;text-align:center}
 }
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--mid);
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1100;
+}
+.nav-links.open a {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-link.active {
+  color: var(--gold);
+}
+@media (max-width:900px){
+  .menu-toggle{display:block}
+}
+
