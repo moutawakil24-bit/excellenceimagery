@@ -45,18 +45,19 @@
         .logo-brand {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .logo {
-            height: 40px;
+            height: 60px;
             width: auto;
+            filter: contrast(1.1);
         }
 
         .brand-name {
             font-family: 'Butler', serif;
-            font-size: 1.3rem;
-            letter-spacing: 2px;
+            font-size: 1.5rem;
+            letter-spacing: 2.5px;
             color: var(--dark);
             font-weight: 400;
         }
@@ -514,6 +515,14 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
+            .logo {
+                height: 50px;
+            }
+
+            .brand-name {
+                font-size: 1.2rem;
+            }
+
             nav ul {
                 display: none;
             }
@@ -557,8 +566,8 @@
     <!-- HEADER -->
     <header class="header">
         <div class="logo-brand">
-            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/8782ef7b-9480-4737-b60e-f22ba0adf476" alt="Excellence Logo" class="logo">
-            <span class="brand-name">EXCELLENCE</span>
+            <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/e4582a9d-a0ce-4abe-b03f-abdada3ca182.png" alt="Excellence Imagery Logo" class="logo">
+            <span class="brand-name">EXCELLENCE IMAGERY</span>
         </div>
         <nav>
             <ul id="navLinks">
